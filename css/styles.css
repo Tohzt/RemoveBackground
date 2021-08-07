@@ -1,0 +1,37 @@
+body {
+	background-color: #BAC;
+}
+
+#continer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#display-container {
+	display: flex;
+	flex=direction: row;
+	justify-content: space-around;
+}
+
+#background-container {
+}
+#canvas-background {
+}
+
+#btn-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#btn_test {}
+
+#image-container {
+}
+#canvas-image {
+}
+
+#result-container {
+}
+#canvas-result {
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./css/styles.css">
+		<script type="text/javascript" src="./scripts/func.js"></script>
+		<title>No GreenScreen</title>
+	</head>
+	<body>
+		<div id="container">
+
+			<div id="display-container">
+				<div id="background-container">
+					<canvas id="canvas-background" width="460"  height="320" >
+						Canvas not supported!
+					</canvas>
+				</div>
+
+				<div id="image-container">
+					<canvas id="canvas-image" width="460"  height="320">
+						Canvas not supported!
+					</canvas>
+				</div>
+				<br>
+			</div>
+
+
+			<div id="btn-container">
+				<button id="upload">Upload File</button>
+				<script type="text/javascript" src="./scripts/index.js"></script>
+				<button id="btn-loadImage" onclick="uploadImage()">Load Image</button>
+			</div>
+			<br>
+
+			<div id="btn-container">
+				<button id="btn-test" onclick="test()">Generate</button>
+			</div>
+			<br>
+
+			<div id="result-container">
+				<canvas id="canvas-result"  width="460"  height="320">
+					Canvas not supported!
+				</canvas>
+			</div>
+		</div>
+		<script>
+			var image_bgr = new Image();
+			image_bgr.src = "./src/img_bgr.png";
+			var image_obj= new Image();
+			image_obj.src = "./src/img_obj.png";
+			window.onload = function() {
+
+				var c = document.getElementById("canvas-background");
+				var ctx = c.getContext("2d");
+				ctx.drawImage(image_bgr, 0, 0);
+
+				c = document.getElementById("canvas-image");
+				ctx = c.getContext("2d");
+				ctx.drawImage(image_obj, 0, 0);
+
+				c = document.getElementById("canvas-result");
+				ctx = c.getContext("2d");
+				ctx.drawImage(new Image(), 0, 0);
+			}
+		</script>
+	</body>
+</html>
